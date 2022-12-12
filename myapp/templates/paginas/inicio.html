@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block titulo %} Inicio {% endblock %}
+{% block cabeza %} Inicio {% endblock %}
+{% block contenido %} 
+<div class="jumbotron">
+    <h1 class="display-4">Bienvenido al Portafolio</h1>
+    <p class="lead">Comienza a ingresar</p>
+    <hr class="my-4">
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'portafolio' %}" role="button">Empezar</a>
+    </p>
+</div>
+{% endblock %}

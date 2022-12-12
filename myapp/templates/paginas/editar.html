@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block titulo %} Editar Nuevo Portafolio {% endblock %}
+{% block cabeza %} Actualizar portafolio {% endblock %}
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+        Editar portafolio
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos</h4>
+        {% include 'paginas/form.html' %}
+    </div>
+    <div class="card-footer text-muted">
+
+    </div>
+</div>
+
+{% endblock %}

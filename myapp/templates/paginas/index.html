@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block titulo %} Portafolio {% endblock %}
+{% block cabeza %} Portafolio {% endblock %}
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Agregar portafolio</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Portafolio</h4>
+        <div class="table-responsive">
+            <table class="table table-primary table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for porta in portafolio %}
+                    <tr class="">
+                        <td>{{porta.id}}</td>
+                        <td>{{porta.titulo}}</td>
+                        <td>
+                            <img src="{{porta.imagen.url}}" height="100">
+                            
+                        </td>
+                        <td>{{porta.descripcion}}</td>
+                        <td>
+                            <a name="" id="" class="btn btn-info" href="{% url 'editar' porta.id %}" role="button">Editar</a>
+                            <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' porta.id %}" role="button">Borrar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+</div>
+{% endblock %}
